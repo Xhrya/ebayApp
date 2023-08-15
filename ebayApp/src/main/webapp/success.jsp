@@ -24,7 +24,7 @@
 	<%} 
     else {%>
 	
-		<jsp:include page='welcome.jsp'/>
+		<jsp:include page='userPage.jsp'/>
 	
 	<br/>
 	<a href='logout.jsp'>Log out</a>

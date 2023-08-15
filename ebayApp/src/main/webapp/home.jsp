@@ -6,15 +6,17 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body style='background-color: pink;'>
+ <%@include file="navbar.jsp" %>
 
-<a href="http://localhost:8080/cs336Sample1/home.jsp"> Home </a>
+<a href="http://localhost:8080/ebayApp/home.jsp"> Home </a>
 <br/>
-<a href="http://localhost:8080/cs336Sample1/login.jsp"> Login </a>
+<a href="http://localhost:8080/ebayApp/login.jsp"> Login </a>
 <br/>
 
-<a href="http://localhost:8080/cs336Sample1/logout.jsp"> Logout </a>
+<a href="http://localhost:8080/ebayApp/logout.jsp"> Logout </a>
 
 
 </body>
 </html>
+
