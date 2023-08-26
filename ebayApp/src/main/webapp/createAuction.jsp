@@ -51,11 +51,15 @@
 			name="closingtime" id="closingtime" placeholder="Enter closing time" required>
 		<br> 
 		
-		<label for="initialprice"> Initial Price </label> <input type="number""
+		<label for="initialprice"> Initial Price </label> <input type="number"
 			name="initialprice" id="initialprice" placeholder="Enter intial price" required> <br>
 			
 			<label for="increment_price"> Increment Price </label> <input type="number"
 			name="increment_price" id="increment_price" placeholder="Enter increment price" required> <br>
+		
+			
+			<label for="minimum_price"> Minimum Price </label> <input type="number"
+			name="minimum_price" id="minimum_price" placeholder="Enter minimum price" required> <br>
 		
 			
 			<input type="submit" value="Submit">
@@ -119,6 +123,8 @@
 			}
 		}
 	</script>
+
+
 	
 	
 

@@ -8,11 +8,12 @@
 
 </head>
 <body>
-<%@include file="navbar.jsp" %>
+<%@include file="navbarAdmin.jsp" %>
+
 
 	<a href='createCustomerReps.jsp'>  Create Customer Reps </a>	<br/>
 	<a href='generateSummary.jsp'> Generate Summary Results </a>	<br/>
 	
-
+	
 </body>
 </html>

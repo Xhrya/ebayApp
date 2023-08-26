@@ -18,8 +18,8 @@
 	Connection con = db.getConnection();
 	
 	Statement stmt = con.createStatement();
-	ResultSet result = stmt.executeQuery("select * from auction;");
-	
+	ResultSet result = stmt.executeQuery("select * from auction where userId ='" + session.getAttribute("user").toString()+ "'");
+
 	
 	
 	out.println("<b>Current Auctions:</b><br/>"); //should I have use who started it show up?

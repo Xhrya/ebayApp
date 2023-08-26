@@ -14,7 +14,7 @@
 	
 	<a href='userSellItemsList.jsp'> View Active Items</a>
 	<br/>
-	<a href='auctionsList.jsp'> View Auctions List</a>
+	<a href='userAuctionsList.jsp'> View Auctions List</a>
 	
 	<br/>
 	<a href='createItem.jsp'> Create a Listing</a>

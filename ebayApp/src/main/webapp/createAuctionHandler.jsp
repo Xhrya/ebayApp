@@ -29,14 +29,12 @@
 		String initialprice = request.getParameter("initialprice");
 		String increment_price = request.getParameter("increment_price");
 		String seller = (session.getAttribute("user")).toString();
-/* 		String minimum_price = request.getParameter("minimum_price");
- */
-	/* 	String curr_winner = (session.getAttribute("user")).toString();
-		String curr_price = (session.getAttribute("user")).toString();
- */
+		String minimum_price = request.getParameter("minimum_price");
+
+		
 		//create a reuest to get auction
 	
-
+	
 	
 			ResultSet result = stmt.executeQuery("select category_id,subcat_id,item_id from auction where category_id='" + category_id+ "' and subcat_id='" + subcat_id+ "' and item_id='" + item_id+"'");
 			if (result.next()) {
@@ -69,7 +67,10 @@
 			}
 			
 			if(!increment_price.isEmpty()){ //adding increment and minimum price
-			    itemQuery += "'" + increment_price + "','" + initialprice + "'";
+			    itemQuery += "'" + increment_price + "',";
+			}
+			if(!minimum_price.isEmpty()){ //adding increment and minimum price
+			    itemQuery += "'" + initialprice + "',";
 			}
 			if(!seller.isEmpty()){ //adding increment and minimum price
 			    itemQuery += "'" + seller + "'";
@@ -78,8 +79,17 @@
 			itemQuery += ");";
 			
 			out.println(itemQuery);
+			try
 			
-			stmt.executeUpdate(itemQuery);
+			{
+				stmt.executeUpdate(itemQuery);
+
+			}
+			catch(Exception e)
+			{
+				out.println(itemQuery);
+			}
+			
 		
 			
 			
@@ -103,7 +113,8 @@
 			out.println("Auction added!  <br/><a href=''auctionsList.jsp'>Go back</a>");
 			con.close();
 			}
-			
+		
+		
 		
 		
 %>
